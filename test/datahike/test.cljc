@@ -37,6 +37,8 @@
     datahike.test.upsert
     ))
 
+(taoensso.timbre/set-level! :fatal)
+
 (defn ^:export test-clj []
   (datahike.test.core/wrap-res #(t/run-all-tests #"datahike\..*")))
 
